@@ -20,4 +20,9 @@ node {
             app.push("${env.BUILD_NUMBER}")            
               }    
            }
+      stage('Remove Unused docker image') {
+            steps{
+                  sh "docker rmi shafiqsukhianihub/shafiqtoystore:$BUILD_NUMBER"
+                  }
+            }
         }
