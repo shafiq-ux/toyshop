@@ -21,8 +21,6 @@ node {
               }    
            }
       stage('Remove Unused docker image') {
-            steps{
-                  sh "docker rmi shafiqsukhianihub/shafiqtoystore:$BUILD_NUMBER"
-                  }
-            }
+            sh "docker rmi shafiqsukhianihub/shafiqtoystore:$BUILD_NUMBER"
+             }
         }
