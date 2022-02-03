@@ -7,7 +7,7 @@ node {
       }     
       stage('Build image') {         
        
-            app = docker.build("shafiqsukhianihub/shafiqtoystore")    
+            app = docker.build("shafiqsukhianihub/shafiqtoystore:$BUILD_NUMBER")    
        }     
       stage('Test image') {           
             app.inside {            
